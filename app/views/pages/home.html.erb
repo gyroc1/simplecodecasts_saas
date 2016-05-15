@@ -2,3 +2,19 @@
     <h1>Welcome to Sketch Max</h1>
     <h3>5 Dollar Sketches, every month!</h3>
 </div>
+<divclass="row">
+    <div class="col-md-6">
+        <div class="well">
+            <h2 class="text-center">Basic Membership</h2>
+            <h4>Sign up for free and get basic access to the community and show off your art.</h4>
+            <%= link_to "Sign up for Basic", new_user_registration_path, class: "btn btn-primary btn-lg btn-block" %>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="well">
+            <h2 class="text-center">Primo Membership</h2>
+            <h4>Sign up for the primo account for just $5/month and be paired with new artists every month!</h4>
+            <%= link_to "Sign up for Primo", new_user_registration_path, class: "btn btn-success btn-lg btn-block" %>
+        </div>
+    </div>
+</div>

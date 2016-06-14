@@ -16,7 +16,13 @@
                                 <%= link_to tem do %>
                                     <h2><%= tem.profile.first_name %> <%= tem.profile.last_name %></h2>
                                 <% end %>
-                                <p><%= tem.profile.job_title %></p>
+                                <p>
+                                    <%= tem.profile.job_title %>
+                                    <% if tem.plan_id == 2 %>
+                                        <span class="label label-danger">PRIMO</span>
+                                      <% end %>
+                                </p>
+                                
                             </div>
                         </div>
                     </li>

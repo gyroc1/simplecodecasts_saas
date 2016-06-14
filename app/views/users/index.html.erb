@@ -1,1 +1,27 @@
-List all users
+<div class="row">
+    <div class="col-md-8 col-md-offset-3">
+        <ul class="list-unstyled">
+            <% @users.each do |tem| %>
+                <% if tem.profile %>
+                    <li>
+                        <div class="well row <%= cycle('alt-bg','') %>">
+                            <div class="col-sm-4 text-center">
+                                <% if tem.profile.avatar %>
+                                    <%= link_to tem do %>
+                                        <%= image_tag tem.profile.avatar.url(:thumb), class: 'user-index-avatar' %></br></br>
+                                    <% end %>
+                                <% end %>
+                            </div>
+                            <div>
+                                <%= link_to tem do %>
+                                    <h2><%= tem.profile.first_name %> <%= tem.profile.last_name %></h2>
+                                <% end %>
+                                <p><%= tem.profile.job_title %></p>
+                            </div>
+                        </div>
+                    </li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+</div>
